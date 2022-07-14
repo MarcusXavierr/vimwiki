@@ -1,0 +1,18 @@
+= Comandos =
+Aqui eu vou colocar os comandos que eu for aprendendo no vim. A estrutura vai ser o titulo (talvez em negrito) com o comando e embaixo coloco um pequena descrição do que o comando faz.
+
+[[More-basic-commands| Comandos mais basicos ou que eu já internalizei bem]]
+==== D ====
+  Deleta o resto da linha
+
+==== S ====
+  Deleta a linha inteira e entra em insert mode
+
+==== c? ====
+Funciona igual o "d", mas além de deletar te coloca no insert mode
+
+==== Comandos com "i" no meio: diw, yi(, etc ====
+Bom, esses comandos são extrememente uteis pra aplicar o comando anterior "d", "y", etc, nos arredores do cursor, ao inves de ir até o começo de uma palavra pra copiar ela, vc pode simplesmente usar o "i" no meio de "yw" ("yiw") e copiar a palavra que *cerca* o cursor.
+
+==== Comandos com "a" no meio: da{, ya(, etc ====
+Esse comando é quase igual ao anterior. A diferença é que ele aplica não só ao que está dentro dos colchetes ou chaves, mas tmb copia o colchete, chave ou aspa que cerca a coisa que está no cursor
