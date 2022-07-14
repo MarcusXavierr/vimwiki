@@ -1,9 +1,16 @@
 = Comandos =
 Aqui eu vou colocar os comandos que eu for aprendendo no vim. A estrutura vai ser o titulo (talvez em negrito) com o comando e embaixo coloco um pequena descrição do que o comando faz.
 
+=== Insights ===
+O "c" basicamente funciona como o comando "d" com a diferença de que além de deletar ele entra em insert mode (isso vale pro shift-C também)
+
 [[More-basic-commands| Comandos mais basicos ou que eu já internalizei bem]]
+
 ==== D ====
-  Deleta o resto da linha
+  Deleta o resto da linha (a partir de onde está o cursor)
+
+==== C ====
+Deleta o resto da linha (a partir de onde está o cursor) e entra em insert mode
 
 ==== S ====
   Deleta a linha inteira e entra em insert mode
@@ -16,3 +23,12 @@ Bom, esses comandos são extrememente uteis pra aplicar o comando anterior "d", 
 
 ==== Comandos com "a" no meio: da{, ya(, etc ====
 Esse comando é quase igual ao anterior. A diferença é que ele aplica não só ao que está dentro dos colchetes ou chaves, mas tmb copia o colchete, chave ou aspa que cerca a coisa que está no cursor
+
+==== CTRL-D | CTRL-U ====
+Esses dois comandos acima servem pra vc ir meia página pra baixo *Down* e pra ir pra meia página pra cima *Up*. Esses comandos eu preciso criar o hábito de usar mais. Parece ser bem mais eficiente do que apertar j ou k e segurar a tecla pra caminhar
+
+==== % ====
+Esse é bem util pra pular pro outro parentese ( ou outra chave { que vc está. Se eu apertar % em cima de uma chave no começo de uma função, eu vou pular logo pro final dessa função onde está a outra chave
+
+==== Números nos comandos ====
+Também é possivel colocar numeros nos comandos. Por exemplo, pra apagar dois niveis que estão entre chaves, basta digitar "d2i{" que ele vai apagar o nivel atual dentro de chaves, logo vai apagar o proximo
