@@ -6,6 +6,7 @@ O "c" basicamente funciona como o comando "d" com a diferença de que além de d
 
 [[More-basic-commands| Comandos mais basicos ou que eu já internalizei bem]]
 
+[[telescope|Comandos do telescope]]
 ==== D ====
   Deleta o resto da linha (a partir de onde está o cursor)
 
@@ -32,3 +33,6 @@ Esse é bem util pra pular pro outro parentese ( ou outra chave { que vc está. 
 
 ==== Números nos comandos ====
 Também é possivel colocar numeros nos comandos. Por exemplo, pra apagar dois niveis que estão entre chaves, basta digitar "d2i{" que ele vai apagar o nivel atual dentro de chaves, logo vai apagar o proximo
+
+==== Telescope resume (space fr) ====
+Esse é um map que eu fiz pro comando telescope resume que continua a sua ultima busca de onde parou

@@ -1,0 +1,17 @@
+=Comandos do telescope=
+
+Aqui eu vou colocar os comandos do telescope que eu achei interessante
+
+== Comandos dentro da janela de busca ==
+
+===== CTRL-D/U =====
+Esse comando serve para fazer half page up/down na janela de preview
+
+===== CTRL-N/P =====
+Serve para navegar entre os resultados da busca sem sair do modo de inserção
+
+== Comandos fora da janela de busca ==
+
+===== Telescope git_commit =====
+Serve para buscar os commits feitos. O interessante é que na janela de preview eu consigo ver as alterações que o commit faz. Se apertar enter tu da checkout naquele commit, mas não entra nos arquivos modificados
+
