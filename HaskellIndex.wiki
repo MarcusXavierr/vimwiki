@@ -1,0 +1,7 @@
+=Resumos de haskell=
+A ideia aqui é guardar os tópicos que eu vou aprendendo em haskell
+
+* [[HaskellTypes|Criação de novos tipos]]
+* [[TypeClasses|Classes de tipo]]
+* [[Monoid|Monoids]]
+* [[Functor|Functors]]

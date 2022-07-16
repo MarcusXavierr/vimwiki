@@ -1,0 +1,65 @@
+=Criação de novos tipos=
+É possivel fazer algumas coisas interessantes no haskell. Como por exemplo: Criar novos tipos, criar Aliases para os tipos já existentes, e ainda fazer algebra com os tipos (existem tipos soma, tipos produto, etc)
+
+==Criação de aliases para tipos já existentes==
+Bom primreiro eu vou falar sobre adicionar apelidos a tipos já existentes. Pra vc criar um alias é bem simples. Basta você colocar
+
+{{{haskell
+type Produto = (Integer, String, Double)
+type Cliente = (Integer, String, Double)
+-- e voce pode fazer getters de coisas dessa forma
+
+pago  (_, _, p) = p
+preco           = pago
+
+-- E podemos implementar uma funcao de troco assim
+troco :: Produto -> Cliente -> Double
+troco produto cliente = pago cliente - preco produto
+}}}
+
+O que o haskell tá fazendo aí em cima é basicamente pegar o Produto e Cliente e substituir por `(Integer, String, Double)` na hora de compilar. Isso é literalmente um alias. E por ser isso, quer dizer que nao existe nenhuma diferença de Cliente pra Produto. Ambos são tuplas com int, string, e double. Ou seja, nós podemos nos confundir e usar um no lugar do outro
+
+Para evitar esse problema citado acima. O *NEWTYPE* pode ser usado. embora também possamos usar o *DATA*
+
+newtype, ele tem a vantagem de gastar menos memoria q nem o type e tem a vantagem de não permitir que vc use um tipo no lugar do outro que nem é feito no data, mas ele não pode ser usado em tipos de soma nem produto
+
+==Criação de novos tipos ==
+Agora, caso eu queira criar um novo tipo, como por exemplo um Tipo Direcao, que tem Norte, Sul, Leste, Oeste. Então eu preciso usar o *Data*. a vantagem do Data é que ele realmente cria um novo tipo ao inves de fazer um alias. Aqui fica dois exemplos de como criar um tipo com data
+
+{{haskell
+-- Tipo Soma
+data Dir = Norte | Sul | Leste | Oeste
+
+-- Tipo Produto
+data Ponto = MkPonto Double Double
+ }}
+
+Dois tipos bem usados sao o tipo soma (onde o numero de possibilidades para esse tipo é a soma dos pipes). E o tipo produto (onde o numero de possiblidades para esse tipo é o produto de todos os parametros). Da pra fazer umas algebras doidas com esses tipos.
+
+Perceba que o tipo soma não tem nenhum construtor, enquanto o tipo produto tem construtores.
+
+== Record Types ==
+
+Eu estava com preguiça de citar essa coisa, mas é muito importante pra ficar de fora
+
+Record types é como se fosse um dict no haskell. Vc consegue usar eles pra pegar os valores de um tipo mais facilmente (ao inves de fazer o getter que eu fiz no começo desse artigo você simplesmente faz o seguinte)
+
+{{haskell
+data Ponto3D = Ponto {
+  _coordX :: Double,
+  _coordY :: Double,
+  _coordZ :: Double
+} deriving Show
+
+data  Tree a = Leaf a
+                | Node {
+                  _right :: Tree a
+                  _value :: a
+                  _left :: Tree a
+                } deriving Show
+ }}
+
+ == Outros assuntos ==
+ Também existem outros assuntos que eu estou com preguiça de listar:
+ 1. Tipos recursivos
+ 2. Algebra dos tipos

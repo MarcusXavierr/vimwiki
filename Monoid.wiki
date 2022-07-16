@@ -1,0 +1,14 @@
+=Monoids=
+
+==O que é?==
+É composto por qualquer set de elementos que possui uma operação binaria (como o <> ) onde essa operação é associativa e possui um elemento neutro, onde X <> neutro = X.
+*A minha operação binária pega dois elementos e gera um novo elemento que é a combinação deles (mantendo o tipo)*
+
+em haskell, essa operação binária é o (<>) que é definido no semigrupo. entao o tipo precisa ter uma instancia de semigrupo pra ter uma instancia de monoide. *Afinal, uma Monoid é simplesmente um Semigroup com um elemento identidade (o elemento neutro)*
+
+==Qual a utilidade?==
+Essa operação binaria do monoid me permite combinar dois elementos em um novo elemento (como 4 + 5 = 9 ou true && false = false). E como a minha operação é associativa, ou seja, tanto faz a ordem em que eu faço a operação (como é na adição e subtração) eu consigo fazer isso `(operacao(item 1, operacao(item2, item3))` e isso basicamente me permite aplicar a minha operação binária em QUALQUER número  ( maior que 2) de parametros.
+
+O elemento neutro do monoide serve pra que eu consiga aplicar a minha operação binaria em um ou nenhum elemento do meu set. como por exemplo `operacao(item1, vazio) = item1` ou `operacao(vazio, vazio) = vazio`. Ou seja, com a operação sendo associativa e tendo o elemento neutro, eu consigo aplicar a minha operação que antes era binaria, em qualquer numero de elementos. muito util pra recursão.
+
+*Ou seja, Monoids encodam como você opera em multiplos objetos (ou elementos). Eles explicam como operações simples podem ser combinadas para formar operações longa*

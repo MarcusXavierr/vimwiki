@@ -1,2 +1,4 @@
 == Minha wiki ==
-* [[Commands|Lista de comandos que eu aprendi no vim]]
+[[Commands|Lista de comandos que eu aprendi no vim]]
+
+[[HaskellIndex|Resumos sobre as coisas que estudei em haskell]]
