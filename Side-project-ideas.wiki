@@ -1,0 +1,3 @@
+= Ideias Para projetos futuros =
+
+[[habitica-cli|Um CLI para o habitica]]
