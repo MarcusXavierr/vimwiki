@@ -7,6 +7,7 @@ O "c" basicamente funciona como o comando "d" com a diferença de que além de d
 [[More-basic-commands| Comandos mais basicos ou que eu já internalizei bem]]
 
 [[telescope|Comandos do telescope]]
+
 ==== D ====
   Deleta o resto da linha (a partir de onde está o cursor)
 

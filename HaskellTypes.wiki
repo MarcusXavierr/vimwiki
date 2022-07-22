@@ -26,13 +26,13 @@ newtype, ele tem a vantagem de gastar menos memoria q nem o type e tem a vantage
 ==Criação de novos tipos ==
 Agora, caso eu queira criar um novo tipo, como por exemplo um Tipo Direcao, que tem Norte, Sul, Leste, Oeste. Então eu preciso usar o *Data*. a vantagem do Data é que ele realmente cria um novo tipo ao inves de fazer um alias. Aqui fica dois exemplos de como criar um tipo com data
 
-{{haskell
+{{{haskell
 -- Tipo Soma
 data Dir = Norte | Sul | Leste | Oeste
 
 -- Tipo Produto
 data Ponto = MkPonto Double Double
- }}
+ }}}
 
 Dois tipos bem usados sao o tipo soma (onde o numero de possibilidades para esse tipo é a soma dos pipes). E o tipo produto (onde o numero de possiblidades para esse tipo é o produto de todos os parametros). Da pra fazer umas algebras doidas com esses tipos.
 
@@ -44,7 +44,7 @@ Eu estava com preguiça de citar essa coisa, mas é muito importante pra ficar d
 
 Record types é como se fosse um dict no haskell. Vc consegue usar eles pra pegar os valores de um tipo mais facilmente (ao inves de fazer o getter que eu fiz no começo desse artigo você simplesmente faz o seguinte)
 
-{{haskell
+{{{haskell
 data Ponto3D = Ponto {
   _coordX :: Double,
   _coordY :: Double,
@@ -57,7 +57,7 @@ data  Tree a = Leaf a
                   _value :: a
                   _left :: Tree a
                 } deriving Show
- }}
+ }}}
 
  == Outros assuntos ==
  Também existem outros assuntos que eu estou com preguiça de listar:
