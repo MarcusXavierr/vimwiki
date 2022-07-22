@@ -1,0 +1,42 @@
+=Functors=
+Functor é uma função que recebe uma função (a -> b) e transforma em uma função (F a -> F b) onde F pode ser uma lista, maybe, arvore, etc. Então basicamente o functor se resume a uma função de alta ordem que pega uma funçao de (a -> b) e transforma em uma função de `a` pra `b` dentro do contexto de um tipo parametrico
+
+
+O functor é deficido da seguinte forma
+{{{haskell
+class Functor f where
+ fmap :: (a -> b) -> (f a -> f b)
+
+-- E o fmap precisa respeitar algumas propriedades
+fmap id == id
+fmap f . fmap g = fmap (f . g)
+
+-- Abaixo vou implementar uma instancia de fmap pra lista, só pra exemplificar
+instance Functor [] where
+    fmap f [] = []
+    fmap f (x:xs) = f x : fmap f xs
+
+-- Implementar pra alguns outros tipos
+instance Functor Maybe where
+    fmap f Nothing = Nothing
+    fmap f (Just x) = Just (f x)
+
+  }}}
+
+ ==== Dica ====
+ Além do fmap, também é possivel usar o <$> que é basicamente o fmap, mas em forma de operador, abaixo deixo o tipo das duas funções
+
+{{{haskell
+fmap :: Functor f => (a -> b) -> f a -> f b
+(<$>) :: Functor f => (a -> b) -> f a -> f b
+  }}}
+
+ Outra dica bem interessante é que quase todos os tipos parametricos possuem uma instancia de functor, pois o processo de criação de uma instancia de funtor nao costuma mudar muito. Então o GHC possui uma funcionalidade que você pode derivar automaticamente uma instancia de Functor pra qualquer tipo de dado, basta usar uma diretiva no começo do arquivo e usar o `deriving Functor`. Exemplo
+
+{{{
+{-# LANGUAGE DeriveFunctor #-}
+...
+data Tree a = Leaf a | Node (Tree a) a (Tree a)
+    deriving (Show, Functor)
+
+  }}}
