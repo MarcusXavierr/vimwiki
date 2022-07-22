@@ -1,0 +1,7 @@
+[[https://engagor.github.io/blog/2017/01/01/vim-ide-setting-up/|Vim as PHP IDE]]
+
+[[https://github.com/terryma/vim-multiple-cursors|Multiple cursors (parece util pra fazer CTRL-D)]]
+
+[[https://github.com/tobyS/skeletons.vim|Skeleton pra ultilizar nos snippets]]
+
+[[https://github.com/L3MON4D3/LuaSnip|LuaSnip, Outro plugin de Snippets]]
