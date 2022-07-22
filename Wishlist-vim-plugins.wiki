@@ -5,3 +5,4 @@
 [[https://github.com/tobyS/skeletons.vim|Skeleton pra ultilizar nos snippets]]
 
 [[https://github.com/L3MON4D3/LuaSnip|LuaSnip, Outro plugin de Snippets]]
+[[https://www.youtube.com/watch?v=Dn800rlPIho|LuaSnip]]
