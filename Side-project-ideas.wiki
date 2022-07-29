@@ -1,3 +1,5 @@
 = Ideias Para projetos futuros =
 
 [[habitica-cli|Um CLI para o habitica]]
+
+[[CLI-english-sentence-tracker|Um CLI pra fazer tracking das sentenças que eu aprendo em inglês]]

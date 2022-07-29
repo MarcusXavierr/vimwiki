@@ -1,0 +1,14 @@
+= CLI tracker de sentenças em inglês =
+Bom, um problema que eu tenho é salvar palavras que eu não conheço em ingles para poder minerar frases e colocar no anki. Esse projeto é para criar um CLI que me permita salvar essas palavras e também me permita fazer outras coisas.
+
+O mvp já está pronto
+
+[[https://github.com/MarcusXavierr/english-sentence-tracker|Projeto]]
+
+== Ideias para a v1.02 ==
+- [ ] Buscar a tradução da palavra (ou significado dela) de alguma api e printar no terminal
+    - [ ] Fazer o mais simples possivel. Simplesmente buscar a tradução da palavra usando o google tranlator
+    - [ ] [[https://pkg.go.dev/cloud.google.com/go/translate|Doc do google translate]]
+
+
+[[next-ideas|Ideias paras as proximas versões]]

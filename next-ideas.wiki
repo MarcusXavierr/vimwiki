@@ -1,0 +1,12 @@
+= Ideias paras as proximas versões =
+
+* Permitir que o usuário escolha o working directory dele
+* Permitir que o usuário Sette as linguagens que ele pretende usar
+* Ter suporte ao ruindows
+
+* Mostrar uma sentença em ingles com a palavra que eu não sei
+    * Achar uma biblioteca para fazer requisições HTTP
+    * Achar uma API para buscar o significado de palavras em inglês
+    * Implementar a lógica para printar a tradução (Usando TDD)
+
+* Botar uma tradução automatica de um cambridge da vida
