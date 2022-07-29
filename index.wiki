@@ -3,6 +3,8 @@
 
 [[HaskellIndex|Resumos sobre as coisas que estudei em haskell]]
 
+[[Resumo sobre coisas que estudei em Go]]
+
 [[Wishlist-vim-plugins|Lista de plugins interessantes que eu quero olhar]]
 
 [[Side-project-ideas|Ideias para projetos]]

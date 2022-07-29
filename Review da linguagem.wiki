@@ -1,0 +1,7 @@
+= Review da Linguagem =
+Go me parece ser um linguagem um pouco chatinha de se mexer por ter uma pegada muito imperativa (o mesmo acontece no C).
+O pessoal jura que essa merda deixa a linugagem mais simples, mas eu sinceramente acho que só empobrece a linguagem essa falta absurda de recursos (se quiser remover um item de um slice tem que fazer gamba pra appendar dois slices, pqp).
+Talvez seja o haskell que me deixou mal acostumado, though
+
+Bom, Go não possui classes, possui Struct pra substituir. Go possui slices ao inves de arrays. Mas a linguagem tmb tem suas vantagens. O fato da STL ter quase tudo que se precisa, e o fato da linguagem gerar um binario que roda em todo canto sem ter que instalar nada fazem do Go uma lang bem interessate.
+Sem contar que o suporte de Go pro vim é muito bom, esse plugin vim-go é bem util
